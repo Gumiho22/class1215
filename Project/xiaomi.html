@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./css/normalize.css">
+    <title>Document</title>
+    <style>
+        body{
+            font:14px/1.5 Helvetica Neue,Helvetica,Arial,Microsoft Yahei,Hiragino Sans GB,Heiti SC,WenQuanYi Micro Hei,sans-serif;
+            min-width: 1226px;
+        }
+        .head{
+            width: 100%;
+            height: 120px;
+            min-width: 1226px;
+            /* border: 1px solid green; */
+        }
+        .head a{
+            /* display: block; */
+            position: absolute;
+            width: 100%;
+            height: 120px;
+            min-width: 1226px;
+            background-image: url('./img/xiaomi11.jpg');
+            /* border:1px solid red; */
+            background-repeat: no-repeat;
+            background-position: 50%;
+            background-size: auto 120px;
+            
+        }
+        #menu{
+            width: 100%;
+            min-width: 1226px;
+            height: 40px;
+            /* border: 1px solid blue; */
+            background-color: rgb(51,51,51);
+        }
+        #menu .menu-box{
+            
+            width: 1226px;
+            height: 40px;
+            margin: 0 auto;
+        }
+        #menu .menu-box li{
+            height: 40px;
+            line-height: 40px;
+            
+        }
+        #menu .menu-box a{
+            font-size: 12px;
+            color: #B0B0B0;
+            text-decoration: none;
+        }
+        #menu .menu-box a:hover{
+            color: #fff;
+        }
+        #menu .menu-box span{
+            margin: 0.2em;
+            font-size: 12px;
+            color: #424242;
+        }
+        #menu .menu-box .list-menu{
+            float: left;
+            /* border: 1px solid red; */
+        }
+        #menu .menu-box .list-menu ul{
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        #menu .menu-box .list-menu ul li{
+            float: left;
+        }
+        #menu .menu-box .list-menu .app-download{
+            position: relative;
+        }
+        #menu .menu-box .list-menu .appcode{
+            position: absolute;
+            top: 40px;
+            left: 50%;
+            width: 124px;
+            height: 150px;
+            margin-left: -55px;
+            margin-top: 0;
+            background-color: #fff;
+            box-shadow: 0px 1px 5px #aaa;
+            text-align: center;
+            font-size: 14px;
+            line-height: 1;
+            color: #333;
+            display: none;
+            
+            /* border: 1px solid red; */
+        }
+        #menu .menu-box .list-menu .appcode span{
+            position: absolute;
+            top: -20px;
+            left: 30%;
+            border: 10px solid transparent;
+            border-bottom-color:#fff ;
+        }
+        #menu .menu-box .list-menu ul li:hover span.appcode{
+            display: block;
+        }
+        #menu .menu-box .list-menu .appcode img{
+            width: 90px;
+            height: 90px;
+            display: block;
+            margin: 18px auto 12px;
+            border: 0;
+        }
+        #menu .menu-box .list-menus {
+            float: right;
+            /* border: 1px solid blue; */
+        }
+        #menu .menu-box .list-menus ul{
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+        }
+        #menu .menu-box .list-menus ul li{
+            float: left;
+        }
+        #menu .menu-box .list-menus li:hover a.shopping-cart{
+            background-color: #fff;
+            color: #ff6700;
+        }
+        
+        #menu .menu-box .list-menus .shopping-cart{
+            display: block;
+            /* border: 1px solid gold; */
+            width: 120px;
+            height: 40px;
+            text-align: center;
+        }
+        #menu .menu-box .list-menus .cart-item{
+            position: relative;
+            background-color: rgb(66,66,66);
+            margin-left: 12px;
+        }
+        .list-menus  div.cart-order{
+            position: absolute;
+            right: 0;
+            top: 40px;
+            width: 316px;
+            height: 100px;
+            background-color: #fff;
+            box-shadow: 0px 1px 5px #aaa;
+            display: none;
+            /* border: 1px solid red; */
+        }
+        .menu-box .list-menus li:hover div.cart-order{
+            display: block;
+        }
+        #menu-logo{
+            width: 1226px;
+            min-width: 1226px;
+            height: 100px;
+            margin: 0 auto;
+            border: 1px solid red;
+            font-size: 0;
+        }
+        #menu-logo .logo{
+            float: left;
+            margin-top: 22px;
+            width: 55px;
+            height: 55px;
+            line-height: 55px;
+            vertical-align: middle;
+            background-color: rgb(255,103,0);
+            border: 1px solid green;
+        }
+        #menu-logo .logo img{
+            vertical-align: middle;
+        }
+        #menu-logo .menu-phone{
+            display: inline-block;
+            font-size: 16px;
+            width: 850px;
+            height: 100%;
+            border: 1px solid blue;
+        }
+        #menu-logo .menu-phone .menu-first-li{
+            width: 142px;
+            height: 88px;
+            box-sizing: border-box;
+            border: 1px solid yellow;
+        }
+        #menu-logo .menu-phone ul{
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        #menu-logo .menu-phone ul li{
+            float: left;
+            padding: 26px 10px 38px 10px;
+        }
+        #menu-logo .menu-serch{
+            float: right;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="head">
+        <a> </a>
+    </div>
+
+<!--导航菜单-->
+<div id="menu">
+    <div class="menu-box">
+        <div class="list-menu">
+            <ul>
+                <li>
+                    <a href="#">小米商城</a>
+                    <span>|</span>
+                </li>
+                <li>
+                    <a href="#">MIUI</a>
+                    <span>|</span>
+                </li>
+                <li>
+                    <a href="#">IoT</a>
+                    <span>|</span>
+                </li>
+                <li>
+                    <a href="#">云服务</a>
+                    <span>|</span>
+                </li>
+                <li>
+                    <a href="#">天星数科</a>
+                    <span>|</span>
+                </li>
+                <li>
+                    <a href="#">有品</a>
+                    <span>|</span>
+                </li>
+                <li>
+                    <a href="#">小爱开放平台</a>
+                    <span>|</span>
+                </li>
+                <li>
+                    <a href="#">企业团购</a>
+                    <span>|</span>
+                </li>
+                <li>
+                    <a href="#">资质证照</a>
+                    <span>|</span>
+                </li>
+                <li>
+                    <a href="#">协议规则</a>
+                    <span>|</span>
+                </li>
+                <li  class="app-download">
+                    <a href="#">下载app
+                        <span class="appcode" >
+                            <img src="./img/xiaomi_ma.png">
+                            小米商城APP
+                            <span></span>
+                        </span>
+                    </a>
+                    <span>|</span>
+                </li>
+                <li>
+                    <a href="#">智能生活</a>
+                    <span>|</span>
+                </li>
+                <li>
+                    <a href="#">Select Location</a>
+                </li>
+            </ul>
+        </div>
+        <div class="list-menus">
+            <ul>
+                <li><a href="#">登录</a>
+                    <span>|</span>
+                </li>
+                <li>
+                    <a href="#">注册</a>
+                    <span>|</span>
+                </li>
+                <li>
+                    <a href="#">消息通知</a>
+                </li>
+                <li class="cart-item">
+                    <a href="#" class="shopping-cart">购物车
+                        <spa>（0）</spa>
+                    </a>
+                    <div class="cart-order">1111</div>
+                </li>
+                
+            </ul>
+        </div>
+    </div>
+   
+</div>
+<!---->
+<div id="menu-logo">
+    <div class="logo">
+        <a><img src="./img/mi-logo.png"></a>
+    </div>
+    <div class="menu-phone">
+        <ul>
+            <li class="menu-first-li"></li>
+            <li><a href="#">小米手机</a></li>
+            <li><a href="#">Redmi红米</a></li>
+            <li><a href="#">电视</a></li>
+            <li><a href="#">笔记本</a></li>
+            <li><a href="#">家电</a></li>
+            <li><a href="#">路由器</a></li>
+            <li><a href="#">智能硬件</a></li>
+            <li><a href="#">服务</a></li>
+            <li><a href="#">社区</a></li>
+        </ul>
+    </div>
+    <div class="menu-serch">
+        <form>
+            <input type="text">
+            <button type="submit">搜索</button>
+        </form>
+    </div>
+</div>
+</body>
+</html>
